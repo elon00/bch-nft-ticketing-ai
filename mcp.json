@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "bch-nft-ticketing-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "HACKATHON_TRACK": "Bitcoin Cash",
+        "PROJECT_TICKER": "BCHTICK"
+      },
+      "tools": [
+        {
+          "name": "verify_bchtick_invariants",
+          "description": "Verifies deterministic invariants for BCH NFT Ticketing AI on Bitcoin Cash."
+        },
+        {
+          "name": "execute_bchtick_action",
+          "description": "Executes authenticated NFT state transition."
+        }
+      ]
+    }
+  }
+}
